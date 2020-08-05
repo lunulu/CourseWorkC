@@ -48,7 +48,7 @@ int	main(int argc, char** argv)
 		j = atoi(argv[4]) - 1;
 		while (text_1[++i] != '\0' && text_2[++j] != '\0')
 		{
-			if (text_1[i] == '\0')
+			if (text_1[i] == '\n')
 			{
 				if (char_number == -1)
 					line_number++;
