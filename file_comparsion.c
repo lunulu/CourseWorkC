@@ -18,7 +18,7 @@ char*	read_file(char *argv)
 		while (read(fd, &buff, 1))
 			ret[++i] = buff;
 	else
-		printf("%s", strerror(errno));
+		printf("%s\n", strerror(errno));
 	close(fd);
 	ret[i + 1] = '\0';
 	return (ret);
@@ -57,7 +57,7 @@ int	main(int argc, char** argv)
 				char_number = i;
 		}
 		if (char_number == -1)
-			printf("These components are the same.\n");
+			printf("These components are the same or there is a problem.\n");
 		else
 		{
 			printf("The number of line: %d\n", line_number);
