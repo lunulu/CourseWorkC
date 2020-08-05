@@ -50,7 +50,8 @@ int	main(int argc, char** argv)
 		{
 			if (text_1[i] == '\0')
 			{
-				line_number++;
+				if (char_number == -1)
+					line_number++;
 				char_number = 0;
 			}
 			if (text_1[i] != text_2[j] && char_number == -1)
