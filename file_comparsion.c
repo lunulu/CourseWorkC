@@ -46,15 +46,11 @@ int	main(int argc, char** argv)
 		text_2 = read_file(argv[3]);
 		i = atoi(argv[2]) - 1;
 		j = atoi(argv[4]) - 1;
-		while (text_1[++i] != '\0' && text_2[++j] != '\0')
+		while (text_1[++i] != '\0' && text_2[++j] != '\0' && char_number == -1)
 		{
 			if (text_1[i] == '\n')
-			{
-				if (char_number == -1)
-					line_number++;
-				char_number = 0;
-			}
-			if (text_1[i] != text_2[j] && char_number == -1)
+				line_number++;
+			if (text_1[i] != text_2[j])
 				char_number = i;
 		}
 		if (char_number == -1)
