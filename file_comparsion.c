@@ -39,19 +39,25 @@ int	main(int argc, char** argv)
 		int	j;
 		int 	line_number;
 		int	char_number;
+		int	char_counter;
 
 		line_number = 0;
 		char_number = -1;
+		char_counter = -1;
 		text_1 = read_file(argv[1]);
 		text_2 = read_file(argv[3]);
-		i = atoi(argv[2]) - 1;
-		j = atoi(argv[4]) - 1;
+		i = atoi(argv[2]) - 2;
+		j = atoi(argv[4]) - 2;
 		while (text_1[++i] != '\0' && text_2[++j] != '\0' && char_number == -1)
 		{
 			if (text_1[i] == '\n')
+			{
 				line_number++;
+				char_counter = -2;
+			}
+			char_counter++;
 			if (text_1[i] != text_2[j])
-				char_number = i;
+				char_number = char_counter;
 		}
 		if (char_number == -1)
 			printf("These components are the same or there is a problem.\n");
