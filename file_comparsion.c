@@ -57,8 +57,8 @@ int	main(int argc, char** argv)
 			printf("These components are the same or there is a problem.\n");
 		else
 		{
-			printf("The number of line: %d\n", line_number);
-			printf("The number of char: %d\n", char_number);
+			printf("The number of line: %d\n", line_number + 1);
+			printf("The number of char: %d\n", char_number + 1);
 		}
 	}
 	return (0);
